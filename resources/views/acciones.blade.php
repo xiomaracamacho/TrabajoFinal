@@ -20,6 +20,10 @@
                 <a href="{{ route('estudianteD') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2">
                     Datos Estudiantes
                 </a>
+
+                <a href="{{ route('maestro') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2">
+                    Registrar Maestro
+                </a>
                 
             </div>
         </div>

@@ -7,7 +7,8 @@ use App\Http\Controllers\RegistrarAdministradores;
 use App\Http\Controllers\Administradorr;
 use App\Http\Controllers\Acciones;
 use App\Http\Controllers\AccionesA;
-
+use App\Http\Controllers\MaestroController;
+use App\Http\Controllers\MaestroA;
 
 
 //pagina principal
@@ -42,4 +43,14 @@ Route::get('/estudianteD', [Acciones::class, 'index'])->name('estudianteD');
 
 Route::delete('/estudianteD/{id}', [Acciones::class, 'eliminarUsuario'])->name('usuarios.eliminar');
 
+//para maestro
+//boton
+Route::get('/maestro', [MaestroController::class,'index'])->name('maestro');
+//registro
+Route::post('/maestro', [MaestroController::class,'index'])->name('registrar');
+Route::post('/maestro', [MaestroController::class,'store']);
+
+//para ver y eliminar en la lista de maestr
+Route::get('/listaMaestro', [MaestroA::class, 'index'])->name('listaMaestro');
+Route::delete('/listaMaestro/{id}', [MaestroA::class, 'eliminarUsuario'])->name('usuarios.eliminar');
 
